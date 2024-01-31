@@ -23,3 +23,9 @@ const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 const nav = document.querySelector("nav");
+
+class AccountManager {
+  constructor() {
+    this.accounts = [];
+  }
+}
