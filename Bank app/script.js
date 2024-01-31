@@ -49,6 +49,17 @@ accountManager.getAccounts().forEach(
       .join(""))
 );
 
+
+
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
+
+  accountManager.getAccounts().forEach((acc) => {
+    console.log(acc);
+    if (
+      acc.username === inputLoginUsername.value &&
+      acc.pin === Number(inputLoginPin.value)
+    ) 
+  });
+  console.log(accountManager.getAccounts());
 });
