@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 60.75%;
   box-sizing: border-box;
 }
 
@@ -21,6 +21,8 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  margin: 60px;
+  flex-direction: column;
   align-items: center;
   padding: 0 2rem;
 }
@@ -28,12 +30,14 @@ nav {
 .welcome {
   font-size: 2.2rem;
   font-weight: 600;
+  padding-bottom: 20px;
 
 }
 
 .logo {
-  height: 8.25rem;
+  height: 9.25rem;
   border: 1px solid rgb(226, 222, 222);
+  margin-bottom: 60px;
 }
 
 .login {
@@ -42,11 +46,11 @@ nav {
 
 .login__input {
   border: none;
-  padding: 0.5rem 2rem;
-  font-size: 1.6rem;
+  padding: 0.75rem 2.25rem;
+  font-size: 1.8rem;
   font-family: inherit;
   text-align: center;
-  width: 12rem;
+  width: 14rem;
   border-radius: 0.75rem;
   margin-right: 1rem;
   color: inherit;
@@ -66,10 +70,11 @@ nav {
 .login__btn {
   border: none;
   background: none;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   color: inherit;
   cursor: pointer;
   transition: all 0.3s;
+  font-weight: bold;
 }
 
 /* MAIN */
@@ -84,8 +89,8 @@ nav {
   gap: 2rem;
 
  
-  /* opacity: 0;
-  transition: all 1s; */
+  opacity: 0;
+  transition: all 1s;
 }
 
 .balance {
@@ -234,4 +239,59 @@ h2 {
   font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
+}
+/* End exceptions */
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/* FOOTER */
+.footer-description{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+  margin-right: 15px;
+}
+.icon{
+  font-size: 26px;
+  color: var(--logo-color);
+  margin: 4px;
+}
+.icon:hover{
+  transform: scale(1.2);
+  transition: all 0.3s;
 }
