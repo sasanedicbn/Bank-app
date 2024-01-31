@@ -180,6 +180,48 @@ nav {
 .summary__value--in {
   color: #66c873;
 }
+/* OPERATIONS */
+.operation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+}
+
+.operation--transfer {
+  background-image: linear-gradient(to top left, #39b385, #9be15d)
+}
+
+.operation--loan {
+  background-image: linear-gradient(to top left, #8e44ad, #af7ac5);
+}
+
+.operation--close {
+  background-image: linear-gradient(to top left, #e74c3c, #d98880);
+}
+
+
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+
+
+.form.form--loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label--loan {
+  grid-row: 2;
+}
 
 .summary__value--out {
   color: #f5465d;
