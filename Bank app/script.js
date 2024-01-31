@@ -48,3 +48,7 @@ accountManager.getAccounts().forEach(
       .map((word) => word[0])
       .join(""))
 );
+
+btnLogin.addEventListener("click", function (event) {
+  event.preventDefault();
+});
