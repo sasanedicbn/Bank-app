@@ -52,8 +52,28 @@ function displayMovements(account) {
   const movementsContainer = document.querySelector(".movements");
 
   movementsContainer.innerHTML = "";
+
+  account.movements.forEach((movement, index) => {
+    const movementType = movement > 0 ? "deposit" : "withdrawal";
+    const date = new Date();
+    const formattedDate = `${date.getDate()}/${
+      date.getMonth() + 1
+    }/${date.getFullYear()}`;
+    const html = `
+        <div class="movements__row">
+          <div class="movements__type movements__type--${movementType}">${
+      index + 1
+    } ${movementType}</div>
+          <div class="movements__date">${formattedDate}</div>
+          <div class="movements__value">${movement}€</div>
+        </div>
+      `;
+
+    movementsContainer.insertAdjacentHTML("beforeend", html);
+  });
 }
 
+displayMovements(accountManager.getAccounts()[0]);
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
 
