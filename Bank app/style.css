@@ -1,0 +1,43 @@
+:root {
+  --primary--color: #628853; 
+  --secondary--color: #58a748; 
+  --font--color: #ecf0f1; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--font--color);
+}
+
+body {
+  background: var(--primary--color);
+  background: linear-gradient(
+    to right,
+    var(--primary--color),
+    var(--secondary--color)
+  );
+  background: linear-gradient(
+    to right,
+    var(--primary--color),
+    var(--secondary--color)
+  );
+
+}
+
+#app {
+  width: 100%;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+}
