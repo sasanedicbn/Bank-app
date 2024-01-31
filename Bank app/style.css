@@ -1,43 +1,74 @@
-:root {
-  --primary--color: #628853; 
-  --secondary--color: #58a748; 
-  --font--color: #ecf0f1; 
-}
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
   font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--font--color);
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--primary--color);
-  background: linear-gradient(
-    to right,
-    var(--primary--color),
-    var(--secondary--color)
-  );
-  background: linear-gradient(
-    to right,
-    var(--primary--color),
-    var(--secondary--color)
-  );
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  height: 100vh;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.welcome {
+  font-size: 2.2rem;
+  font-weight: 600;
 
 }
 
-#app {
-  width: 100%;
+.logo {
+  height: 8.25rem;
+  border: 1px solid rgb(226, 222, 222);
 }
 
-img {
-  width: 25px;
-  height: 25px;
+.login {
+  display: flex;
 }
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 0.75rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
