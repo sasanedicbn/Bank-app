@@ -35,3 +35,8 @@ class AccountManager {
     return this.accounts;
   }
 }
+
+const accountManager = new AccountManager();
+accounts.forEach((acc) => {
+  accountManager.addAccount(acc);
+});
