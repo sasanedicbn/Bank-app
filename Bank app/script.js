@@ -49,8 +49,6 @@ accountManager.getAccounts().forEach(
       .join(""))
 );
 
-
-
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -59,7 +57,10 @@ btnLogin.addEventListener("click", function (event) {
     if (
       acc.username === inputLoginUsername.value &&
       acc.pin === Number(inputLoginPin.value)
-    ) 
+    ) {
+      containerApp.style.opacity = "10";
+      nav.style.display = "none";
+    }
   });
   console.log(accountManager.getAccounts());
 });
