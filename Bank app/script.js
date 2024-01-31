@@ -31,4 +31,7 @@ class AccountManager {
   addAccount(account) {
     this.accounts.push(account);
   }
+  getAccounts() {
+    return this.accounts;
+  }
 }
