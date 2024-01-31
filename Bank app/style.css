@@ -89,31 +89,27 @@ nav {
   gap: 2rem;
 
  
-  opacity: 0;
-  transition: all 1s;
+  /* opacity: 0;
+  transition: all 1s; */
 }
 
 .balance {
   grid-column: 1 / span 2;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
+  gap: 20px;
   margin-bottom: 2rem;
 }
 
 .balance__label {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: -0.2rem;
 }
 
-.balance__date {
-  font-size: 1.4rem;
-  color: #888;
-}
-
 .balance__value {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 400;
 }
 
