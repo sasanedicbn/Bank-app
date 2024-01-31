@@ -48,6 +48,11 @@ accountManager.getAccounts().forEach(
       .map((word) => word[0])
       .join(""))
 );
+function displayMovements(account) {
+  const movementsContainer = document.querySelector(".movements");
+
+  movementsContainer.innerHTML = "";
+}
 
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
