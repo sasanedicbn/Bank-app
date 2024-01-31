@@ -40,3 +40,11 @@ const accountManager = new AccountManager();
 accounts.forEach((acc) => {
   accountManager.addAccount(acc);
 });
+accountManager.getAccounts().forEach(
+  (acc) =>
+    (acc.username = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word[0])
+      .join(""))
+);
