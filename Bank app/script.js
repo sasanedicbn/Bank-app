@@ -28,4 +28,7 @@ class AccountManager {
   constructor() {
     this.accounts = [];
   }
+  addAccount(account) {
+    this.accounts.push(account);
+  }
 }
