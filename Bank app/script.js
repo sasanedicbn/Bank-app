@@ -45,6 +45,11 @@ class Bank {
   getBalance(movements) {
     return movements.reduce((acc, currentNum) => acc + currentNum, 0);
   }
+  getIncomes(movements) {
+    return movements
+      .filter((mov) => mov > 0)
+      .reduce((acc, currentNum) => acc + currentNum, 0);
+  }
 }
 
 const accountManager = new AccountManager();
@@ -97,9 +102,8 @@ btnLogin.addEventListener("click", function (event) {
     ) {
       containerApp.style.opacity = "10";
       nav.style.display = "none";
-      const currentBalace = bank.getBalance(acc.movements);
-      labelBalance.textContent = `${currentBalace}€`;
-      console.log(currentBalace);
+      const currentBalance = bank.getBalance(acc.movements);
+      labelBalance.textContent = `${currentBalance}€`;
     }
   });
 
