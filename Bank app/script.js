@@ -97,6 +97,8 @@ btnLogin.addEventListener("click", function (event) {
     ) {
       containerApp.style.opacity = "10";
       nav.style.display = "none";
+      const currentBalace = bank.getBalance(acc.movements);
+      console.log(currentBalace);
     }
   });
 
