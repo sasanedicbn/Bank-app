@@ -100,7 +100,6 @@ btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
 
   accountManager.getAccounts().forEach((acc) => {
-    console.log(acc);
     if (
       acc.username === inputLoginUsername.value &&
       acc.pin === Number(inputLoginPin.value)
@@ -113,11 +112,8 @@ btnLogin.addEventListener("click", function (event) {
       labelSumIn.textContent = `${currentIncomes}€`;
       const currentOutcomes = bank.getOutcomes(acc.movements);
       labelSumOut.textContent = `${currentOutcomes}€`;
-
-      console.log("currentOutcomes", currentOutcomes);
     }
   });
 
   console.log(accountManager.getAccounts());
-  //   console.log(bank.getBalance());
 });
