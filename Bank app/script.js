@@ -42,6 +42,9 @@ class Bank {
     this.sort = sort;
     this.balance = balance;
   }
+  getBalance(movements) {
+    return movements.reduce((acc, currentNum) => acc + currentNum, 0);
+  }
 }
 
 const accountManager = new AccountManager();
