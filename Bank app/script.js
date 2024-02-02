@@ -104,6 +104,9 @@ btnLogin.addEventListener("click", function (event) {
       nav.style.display = "none";
       const currentBalance = bank.getBalance(acc.movements);
       labelBalance.textContent = `${currentBalance}€`;
+      const currentIncomes = bank.getIncomes(acc.movements);
+
+      console.log(currentBalance, "incomes:", incomes);
     }
   });
 
