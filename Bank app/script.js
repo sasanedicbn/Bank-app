@@ -50,6 +50,7 @@ class Bank {
       .filter((mov) => mov > 0)
       .reduce((acc, currentNum) => acc + currentNum, 0);
   }
+  getOutcomes;
 }
 
 const accountManager = new AccountManager();
