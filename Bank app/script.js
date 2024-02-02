@@ -111,7 +111,8 @@ btnLogin.addEventListener("click", function (event) {
       labelBalance.textContent = `${currentBalance}€`;
       const currentIncomes = bank.getIncomes(acc.movements);
       labelSumIn.textContent = `${currentIncomes}€`;
-      console.log(currentBalance, "incomes:", incomes);
+      const currentOutcomes = bank.getOutcomes(acc.movements);
+      console.log("currentOutcomes", currentOutcomes);
     }
   });
 
