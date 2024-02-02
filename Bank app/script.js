@@ -35,8 +35,17 @@ class AccountManager {
     return this.accounts;
   }
 }
+class Bank {
+  constructor(incomes, out, sort, balance) {
+    this.incomes = incomes;
+    this.out = out;
+    this.sort = sort;
+    this.balance = balance;
+  }
+}
 
 const accountManager = new AccountManager();
+const bank = new Bank();
 accounts.forEach((acc) => {
   accountManager.addAccount(acc);
 });
@@ -87,5 +96,7 @@ btnLogin.addEventListener("click", function (event) {
       nav.style.display = "none";
     }
   });
+
   console.log(accountManager.getAccounts());
+  //   console.log(bank.getBalance());
 });
