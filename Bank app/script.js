@@ -129,4 +129,7 @@ btnLogin.addEventListener("click", function (event) {
 
   console.log(accountManager.getAccounts());
 });
-btnSort.addEventListener("click", function () {});
+btnSort.addEventListener("click", function () {
+  accountManager.getAccounts().forEach((acc) => {
+    );
+});
