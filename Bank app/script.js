@@ -132,6 +132,11 @@ btnLogin.addEventListener("click", function (event) {
 btnSort.addEventListener("click", function () {
   accountManager.getAccounts().forEach((acc) => {
     if (acc.username === inputLoginUsername.value) {
+      const sorterMovements = bank.getSort([...acc.movements]);
+      acc.movements = sorterMovements;
+      displayMovements(acc);
+      bank.sort = !bank.sort;
+      console.log(acc);
     }
   });
 });
