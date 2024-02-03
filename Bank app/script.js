@@ -147,4 +147,7 @@ btnTransfer.addEventListener("click", function (event) {
   const senderAccount = accountManager
     .getAccounts()
     .find((acc) => acc.username === senderUsername);
+  const receiverAccount = accountManager
+    .getAccounts()
+    .find((acc) => acc.username === receiverUsername);
 });
