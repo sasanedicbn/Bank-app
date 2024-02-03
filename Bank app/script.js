@@ -162,3 +162,6 @@ btnTransfer.addEventListener("click", function (event) {
   const receiverBalance = bank.getBalance(receiverAccount.movements);
   console.log("click", receiverBalance);
 });
+btnLoan.addEventListener("click", function (event) {
+  event.preventDefault();
+});
