@@ -58,7 +58,13 @@ class Bank {
   }
   getSort(movement) {
     console.log([...movement]);
-    return [...movement].sort((a, b) => {});
+    return [...movement].sort((a, b) => {
+      if (!this.sort) {
+        return a - b;
+      } else {
+        return b - a;
+      }
+    });
   }
 }
 
