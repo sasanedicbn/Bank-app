@@ -150,4 +150,7 @@ btnTransfer.addEventListener("click", function (event) {
   const receiverAccount = accountManager
     .getAccounts()
     .find((acc) => acc.username === receiverUsername);
+  if (!senderAccount || !receiverAccount) return;
+  senderAccount.movements.push(-transferAmount);
+  receiverAccount.movements.push(transferAmount);
 });
