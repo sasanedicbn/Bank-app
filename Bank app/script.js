@@ -143,4 +143,8 @@ btnTransfer.addEventListener("click", function (event) {
   const senderUsername = inputLoginUsername.value;
   const receiverUsername = inputTransferTo.value;
   const transferAmount = Number(inputTransferAmount.value);
+
+  const senderAccount = accountManager
+    .getAccounts()
+    .find((acc) => acc.username === senderUsername);
 });
