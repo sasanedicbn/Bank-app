@@ -56,6 +56,10 @@ class Bank {
       .filter((mov) => mov < 0)
       .reduce((acc, currentNum) => acc + currentNum, 0);
   }
+  getSort(movement) {
+    console.log([...movement]);
+    return [...movement].sort((a, b) => {});
+  }
 }
 
 const accountManager = new AccountManager();
