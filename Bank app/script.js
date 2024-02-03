@@ -36,6 +36,7 @@ class AccountManager {
   }
 }
 class Bank {
+  sort = false;
   constructor(incomes, out, sort, balance) {
     this.incomes = incomes;
     this.out = out;
@@ -95,7 +96,7 @@ function displayMovements(account) {
   });
 }
 
-displayMovements(accountManager.getAccounts()[0]);
+// displayMovements(accountManager.getAccounts()[0]);
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -106,6 +107,7 @@ btnLogin.addEventListener("click", function (event) {
     ) {
       containerApp.style.opacity = "10";
       nav.style.display = "none";
+      displayMovements(acc);
       const currentBalance = bank.getBalance(acc.movements);
       labelBalance.textContent = `${currentBalance}€`;
       const currentIncomes = bank.getIncomes(acc.movements);
