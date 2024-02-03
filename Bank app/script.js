@@ -131,5 +131,7 @@ btnLogin.addEventListener("click", function (event) {
 });
 btnSort.addEventListener("click", function () {
   accountManager.getAccounts().forEach((acc) => {
-    );
+    if (acc.username === inputLoginUsername.value) {
+    }
+  });
 });
