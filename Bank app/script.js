@@ -153,4 +153,12 @@ btnTransfer.addEventListener("click", function (event) {
   if (!senderAccount || !receiverAccount) return;
   senderAccount.movements.push(-transferAmount);
   receiverAccount.movements.push(transferAmount);
+
+  displayMovements(senderAccount);
+  displayMovements(receiverAccount);
+  const senderBalance = bank.getBalance(senderAccount.movements);
+  labelBalance.textContent = `${senderBalance}€`;
+
+  const receiverBalance = bank.getBalance(receiverAccount.movements);
+  console.log("click", receiverBalance);
 });
