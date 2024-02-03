@@ -106,7 +106,6 @@ function displayMovements(account) {
   });
 }
 
-// displayMovements(accountManager.getAccounts()[0]);
 btnLogin.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -136,7 +135,6 @@ btnSort.addEventListener("click", function () {
       acc.movements = sorterMovements;
       displayMovements(acc);
       bank.sort = !bank.sort;
-      console.log(acc);
     }
   });
 });
