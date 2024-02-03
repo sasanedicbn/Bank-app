@@ -138,3 +138,6 @@ btnSort.addEventListener("click", function () {
     }
   });
 });
+btnTransfer.addEventListener("click", function (event) {
+  event.preventDefault();
+});
