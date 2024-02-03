@@ -140,4 +140,7 @@ btnSort.addEventListener("click", function () {
 });
 btnTransfer.addEventListener("click", function (event) {
   event.preventDefault();
+  const senderUsername = inputLoginUsername.value;
+  const receiverUsername = inputTransferTo.value;
+  const transferAmount = Number(inputTransferAmount.value);
 });
