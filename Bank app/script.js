@@ -156,6 +156,8 @@ btnTransfer.addEventListener("click", function (event) {
 
   displayMovements(senderAccount);
   displayMovements(receiverAccount);
+  console.log("senderAcc", senderAccount);
+  console.log("senderAcc", receiverAccount);
   const senderBalance = bank.getBalance(senderAccount.movements);
   labelBalance.textContent = `${senderBalance}€`;
 
