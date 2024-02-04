@@ -236,6 +236,22 @@ h2 {
   font-weight: 500;
   cursor: pointer;
 }
+.form--close{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+}
+ .close-account{
+  padding: 12px 8px;
+  border: rgb(78, 78, 78)
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-image: linear-gradient(to top left, #eb2c17, #e65649);  cursor: pointer;
+  transition: all 0.3s;
+  color: #f5f5f5;
+}
+
 /* End exceptions */
 
 .form__input {
