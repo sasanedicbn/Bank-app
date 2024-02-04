@@ -197,4 +197,7 @@ btnDeleteAcc.addEventListener("click", function (event) {
 });
 btnClose.addEventListener("click", function (event) {
   event.preventDefault();
+  accountManager.getAccounts().forEach((acc) => {
+    console.log(acc);
+   
 });
