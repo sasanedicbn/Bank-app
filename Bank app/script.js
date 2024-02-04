@@ -195,3 +195,6 @@ btnDeleteAcc.addEventListener("click", function (event) {
   });
   modal.style.display = "block";
 });
+btnClose.addEventListener("click", function (event) {
+  event.preventDefault();
+});
