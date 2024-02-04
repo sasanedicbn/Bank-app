@@ -14,6 +14,7 @@ const btnTransfer = document.querySelector(".form__btn--transfer");
 const btnLoan = document.querySelector(".form__btn--loan");
 const btnClose = document.querySelector(".form__btn--close");
 const btnSort = document.querySelector(".btn--sort");
+const btnDeleteAcc = document.querySelector(".close-account");
 
 const inputLoginUsername = document.querySelector(".login__input--user");
 const inputLoginPin = document.querySelector(".login__input--pin");
@@ -23,6 +24,7 @@ const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 const nav = document.querySelector("nav");
+const modal = document.querySelector(".modal");
 
 class AccountManager {
   constructor() {
@@ -33,6 +35,9 @@ class AccountManager {
   }
   getAccounts() {
     return this.accounts;
+  }
+  getRemoveAcc(username) {
+    this.accounts = this.accounts.filter((acc) => acc.username !== username);
   }
 }
 class Bank {
@@ -181,4 +186,12 @@ btnLoan.addEventListener("click", function (event) {
       console.log(currentAmount);
     }
   });
+});
+btnDeleteAcc.addEventListener("click", function (event) {
+  event.preventDefault();
+  const btnClose = document.querySelector(".close-modal");
+  btnClose.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+  modal.style.display = "block";
 });

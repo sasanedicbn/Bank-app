@@ -89,8 +89,8 @@ nav {
   gap: 2rem;
 
  
-  /* opacity: 0;
-  transition: all 1s; */
+  opacity: 0;
+  transition: all 1s;
 }
 
 .balance {
@@ -319,9 +319,12 @@ h2 {
   transform: translate(-50%,0);
   border: 1px solid rgb(110, 107, 107);
   display: none;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
+
 }
 .form--modal{
-  padding: 0 40px;
+  padding: 0 60px;
 }
 .modal--message{
  display: flex;
