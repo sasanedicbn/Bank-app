@@ -166,6 +166,9 @@ btnLoan.addEventListener("click", function (event) {
   event.preventDefault();
   accountManager.getAccounts().forEach((acc) => {
     if (acc.username === inputLoginUsername.value) {
-      
+      const currentAmount = bank.getBalance(acc.movements);
+      const maxLoan = 3 * currentAmount;
+      const currentLoan = Number(inputLoanAmount.value);
+    }
   });
 });
