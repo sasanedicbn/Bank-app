@@ -164,4 +164,8 @@ btnTransfer.addEventListener("click", function (event) {
 });
 btnLoan.addEventListener("click", function (event) {
   event.preventDefault();
+  accountManager.getAccounts().forEach((acc) => {
+    if (acc.username === inputLoginUsername.value) {
+      
+  });
 });
