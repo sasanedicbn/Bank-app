@@ -244,10 +244,11 @@ h2 {
 }
  .close-account{
   padding: 12px 8px;
-  border: rgb(78, 78, 78)
+  border: rgb(78, 78, 78);
   border-radius: 0.7rem;
   font-size: 1.8rem;
-  background-image: linear-gradient(to top left, #eb2c17, #e65649);  cursor: pointer;
+  background-image: linear-gradient(to top left, #eb2c17, #e65649); 
+   cursor: pointer;
   transition: all 0.3s;
   color: #f5f5f5;
 }
@@ -306,4 +307,34 @@ h2 {
 .icon:hover{
   transform: scale(1.2);
   transition: all 0.3s;
+}
+/* Modal */
+.modal{
+  position: absolute;
+  width: 625px;
+  height: 425px;
+  border-radius: 12px;
+  background-color: rgb(255, 67, 67);
+  left: 50%;
+  transform: translate(-50%,0);
+  border: 1px solid rgb(110, 107, 107);
+  display: none;
+}
+.form--modal{
+  padding: 0 40px;
+}
+.modal--message{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 65px 0 ;
+  font-size: 20px;
+font-weight: bold;
+}
+.close-modal{
+  position: absolute;
+ right: 10px;
+ top: 10px;
+ padding: 4px 2px;
+ cursor: pointer;
 }

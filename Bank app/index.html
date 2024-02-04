@@ -25,6 +25,17 @@
     </form>
   </nav>
   <main class="app">
+    <div class="modal">
+      <p class="modal--message"> You want delete this account?</p>
+      <form class="form--modal form modal-form">
+        <input type="text" class="form__input form__input--user" />
+        <input type="password" maxlength="6" class="form__input form__input--pin" />
+        <button class="form__btn form__btn--close">&rarr;</button>
+        <label class="form__label">Confirm user</label>
+        <label class="form__label">Confirm PIN</label>
+      </form>
+      <button class="close-modal">❌</button>
+    </div>
     <!-- BALANCE -->
     <div class="balance">
       <p class="balance__label">Total balance:</p>
