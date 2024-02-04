@@ -203,6 +203,11 @@ btnClose.addEventListener("click", function (event) {
       acc.username === inputCloseUsername.value &&
       acc.pin === Number(inputClosePin.value)
     ) {
+      accountManager.getRemoveAcc(inputCloseUsername.value);
+      modal.style.display = "none";
+      containerApp.style.opacity = "0";
+      nav.style.display = "flex";
+      console.log(accountManager.getAccounts());
     }
   });
 });
