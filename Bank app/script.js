@@ -129,6 +129,8 @@ btnLogin.addEventListener("click", function (event) {
       const currentOutcomes = bank.getOutcomes(acc.movements);
       labelSumOut.textContent = `${currentOutcomes}€`;
     }
+    inputLoginUsername.value = "";
+    inputLoginPin.value = "";
   });
 
   console.log(accountManager.getAccounts());
