@@ -62,7 +62,6 @@ class Bank {
       .reduce((acc, currentNum) => acc + currentNum, 0);
   }
   getSort(movement) {
-    console.log([...movement]);
     return [...movement].sort((a, b) => {
       if (!this.sort) {
         return a - b;
@@ -129,11 +128,7 @@ btnLogin.addEventListener("click", function (event) {
       const currentOutcomes = bank.getOutcomes(acc.movements);
       labelSumOut.textContent = `${currentOutcomes}€`;
     }
-    inputLoginUsername.value = "";
-    inputLoginPin.value = "";
   });
-
-  console.log(accountManager.getAccounts());
 });
 btnSort.addEventListener("click", function () {
   accountManager.getAccounts().forEach((acc) => {
@@ -163,13 +158,11 @@ btnTransfer.addEventListener("click", function (event) {
 
   displayMovements(senderAccount);
   displayMovements(receiverAccount);
-  console.log("senderAcc", senderAccount);
-  console.log("senderAcc", receiverAccount);
+
   const senderBalance = bank.getBalance(senderAccount.movements);
   labelBalance.textContent = `${senderBalance}€`;
 
   const receiverBalance = bank.getBalance(receiverAccount.movements);
-  console.log("click", receiverBalance);
 });
 btnLoan.addEventListener("click", function (event) {
   event.preventDefault();
@@ -184,8 +177,6 @@ btnLoan.addEventListener("click", function (event) {
         const updateBalance = bank.getBalance(acc.movements);
         labelBalance.textContent = `${updateBalance}€`;
       }
-
-      console.log(currentAmount);
     }
   });
 });
@@ -200,7 +191,6 @@ btnDeleteAcc.addEventListener("click", function (event) {
 btnClose.addEventListener("click", function (event) {
   event.preventDefault();
   accountManager.getAccounts().forEach((acc) => {
-    console.log(acc);
     if (
       acc.username === inputCloseUsername.value &&
       acc.pin === Number(inputClosePin.value)
@@ -209,7 +199,6 @@ btnClose.addEventListener("click", function (event) {
       modal.style.display = "none";
       containerApp.style.opacity = "0";
       nav.style.display = "flex";
-      console.log(accountManager.getAccounts());
     }
   });
 });
