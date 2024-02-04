@@ -169,6 +169,10 @@ btnLoan.addEventListener("click", function (event) {
       const currentAmount = bank.getBalance(acc.movements);
       const maxLoan = 3 * currentAmount;
       const currentLoan = Number(inputLoanAmount.value);
+      if (currentLoan <= maxLoan && currentLoan > 0) {
+      }
+
+      console.log(currentAmount);
     }
   });
 });
