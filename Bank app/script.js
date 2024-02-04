@@ -199,5 +199,10 @@ btnClose.addEventListener("click", function (event) {
   event.preventDefault();
   accountManager.getAccounts().forEach((acc) => {
     console.log(acc);
-   
+    if (
+      acc.username === inputCloseUsername.value &&
+      acc.pin === Number(inputClosePin.value)
+    ) {
+    }
+  });
 });
